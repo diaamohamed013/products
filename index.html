@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session 17</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container py-4">
+        <div class="w-75 m-auto">
+            <h1 class="text-capitalize mb-4 fs-2 fw-bold text-black-50">product management system</h1>
+            <label for="validationCustomUsername">Product Name</label>
+            <input type="text" id="pName" id="validationCustomUsername" oninput="validateProductName()"
+                class="form-control mb-3" required>
+            <div class="invalid-feedback d-none my-2" id="input1">
+                Please enter valid name with uppercase letter in the beginning of name.
+            </div>
+
+            <label for="validationCustom02">Product Price</label>
+            <input type="text" id="pPrice" id="validationCustom02" oninput="validateProductPrice()"
+                class="form-control mb-3" required>
+            <div class="invalid-feedback d-none my-2" id="input2">
+                Please enter valid price between 1000$ to 10000$
+            </div>
+
+            <label for="validationCustom03">Product Type</label>
+            <input type="text" id="pType" id="validationCustom03" oninput="validateProductType()" class="form-control mb-3" required>
+            <div class="invalid-feedback d-none my-2" id="input3">
+                Please enter valid type (mobile or tv or device)
+            </div>
+
+            <label for="validationCustom04">Product Description</label>
+            <textarea id="pDesc" id="validationCustom04" oninput="validateProductDesc()" class="form-control" required></textarea>
+            <div class="invalid-feedback d-none my-2" id="input4">
+                Please enter valid description starts with a letter
+            </div>
+
+            <button class="btn mt-4 btn-info" id="addBtn" onclick="addProduct()">Add Product</button>
+            <button class="btn mt-4 btn-info d-none" id="updateBtn" onclick="edit()">Update Product</button>
+            <button class="btn mt-4 ms-2 btn-info" onclick="clearForm()">Reset</button>
+
+
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="w-75 m-auto">
+            <input type="text" onkeyup="search(this.value)" placeholder="search..." id="searchItem"
+                class="form-control">
+        </div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="w-75 m-auto">
+            <table class="table text-capitalize">
+                <thead>
+                    <th>index</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>type</th>
+                    <th>desc</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </thead>
+                <tbody id="myTable">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
