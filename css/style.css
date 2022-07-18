@@ -1,0 +1,13 @@
+.product {
+    width: 75%;
+}
+
+@media screen and (max-width:769px) {
+    .product {
+        width: 100%;
+    }
+
+    .pTable{
+        overflow-y: auto;
+    }
+}
